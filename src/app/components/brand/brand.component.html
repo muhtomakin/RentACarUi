@@ -1,1 +1,40 @@
-<p>brand works!</p>
+<div class="container mt-3 px-5">
+    <div class="row">
+      
+      <div>
+        <input type="text" [(ngModel)]="filterText" class="form-control rounded-0 mb-3"
+        placeholder="Marka Ara" autocomplete="off">
+      </div>
+  
+      <div>
+        <table class="table table-hover table-striped border">
+          <thead>
+            <tr>
+              <th class="text-center" style="width: 50px">#</th>
+              <th>Brand</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let brand of brands | filterPipeBrand: filterText">
+              <th class="text-center">{{ brand.id }}</th>
+              <td>{{ brand.name }}</td>
+              <td class="text-end">
+                  <button class="btn btn-primary btn-sm"
+                          routerLink="/brands/update/{{ brand.id }}">
+                    <i class="bi-pencil me-1"></i> Update
+                  </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <div class="d-grid">
+        <button class="btn btn-primary" routerLink="/brands/add">
+          <i class="bi-plus-square me-1"></i> Add New Brand
+        </button>
+      </div>
+  
+    </div>
+</div>

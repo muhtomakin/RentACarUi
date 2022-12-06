@@ -1,1 +1,37 @@
-<p>car-add works!</p>
+<div class="container mt-3 px-5">
+    <div class="content">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header"><h5 class="title">Add Car</h5></div>
+                <div class="card-body">
+                    <form [formGroup]="carAddForm">
+                        <div class="form-group mb-3">
+                            <input type="text" id="name" formControlName="name" class="form-control" placeholder="Car Name"/>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="number" id="brandId" formControlName="brandId" class="form-control" placeholder="Brand"/>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="number" id="colorId" formControlName="colorId" class="form-control" placeholder="Color"/>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="number" id="modelYear" formControlName="modelYear" class="form-control" placeholder="Year"/>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="number" id="dailyPrice" formControlName="dailyPrice" class="form-control" placeholder="Daily Price"/>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" id="description" formControlName="description" class="form-control" placeholder="Explenation"/>
+                        </div>                   
+                        <div class="form-group">
+                            <input type="number" id="findexPoint" formControlName="findexPoint" class="form-control" placeholder="Findex Point (Should be between 0 - 1900!)"/>
+                        </div>           
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-fill btn-primary" (click)="add()">Add</button>
+                </div>
+            </div>        
+        </div>    
+    </div>
+</div>

@@ -1,1 +1,51 @@
-<p>car-detail works!</p>
+<div class="container mt-3">
+    <div *ngFor="let car of carDetails" class="row">
+  
+      <div class="col-md-12">
+        <div class="alert alert-warning" role="alert"><span class="fw-bold">Required for this vehicle<span class="fw-bolder">Findeks</span> point : </span>{{car.findexPoint}}</div>
+      </div>
+  
+      <div class="col-md-7">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img *ngFor="let image of images" src="https://localhost:44351/uploads/{{image.imagePath}}"
+                class="d-block myimg" alt="{{car.description}}">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    
+      <div class="col-md-5">
+        <div class="card">
+          <div class="card-body">
+  
+            <h2 class="card-title fw-bold mb-4">{{car.carName}}
+            <button routerLink="/cars/update/{{ car.carId }}" class="btn btn-primary btn-sm ">Update</button></h2>           
+  
+            <p><strong>Brand: </strong>{{car.brandName}}</p>
+            <p><strong>Model Year: </strong>{{car.modelYear}}</p>
+            <p><strong>Color: </strong>{{car.colorName}}</p>          
+            <p><strong>Daily Price: </strong>{{car.dailyPrice | vatAdded: 18 }}₺</p>
+            <p><strong>Explanation: </strong>{{car.description}}</p>  
+            
+            <div *ngIf="isAuthenticate()">
+              <app-car-rent></app-car-rent>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+   </div>
+  </div>

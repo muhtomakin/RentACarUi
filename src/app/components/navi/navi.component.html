@@ -1,1 +1,67 @@
-<p>navi works!</p>
+<nav class="navbar  navbar-expand-xl navbar-dark bg sticky-top">
+    <div class="container">
+      <div class="row">
+        <div class="d-flex">
+  
+          <div class="col-4">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active fw-bold" aria-current="page" routerLink="">TOMAKIN</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="col-8">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="">Homepage</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/cars">Cars</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/brands">Brands</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/colors">Color</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/customers">Customer</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/rentals">Rent</a>
+                </li>
+  
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Add</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li>
+                        <a class="dropdown-item" routerLink="/cars/add">Add Car</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" routerLink="/brands/add">Add Brand</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" routerLink="/colors/add">Add Color</a>
+                      </li>
+                    </ul>
+                </li>     
+  
+                <li class="nav-item ms-5">
+                  <app-auth-menu></app-auth-menu>
+                </li>
+  
+                <li class="nav-item">
+                  <app-cart-summary></app-cart-summary>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>

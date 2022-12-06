@@ -1,7 +1,7 @@
 export interface Card {
     id: number;
     customerId: number;
-    cardNumberSurname: string;
+    cardNameSurname: string;
     cardNumber: string;
     validDate: string;
     cvv: string;

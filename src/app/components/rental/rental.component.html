@@ -1,1 +1,31 @@
-<p>rental works!</p>
+<div class="container mt-3 px-5">
+    <div class="row">
+  
+      <div>
+        <table class="table table-hover table-striped border">
+          <thead>
+            <tr>
+              <th class="text-center" style="width: 50px">#</th>
+              <th>Name Surname</th>
+              <th>Brand - Year</th>
+              <th>Rent Date</th>
+              <th>Return Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let rental of rentDetails">
+              <th class="text-center">{{ rental.id }}</th>
+              <td>{{ rental.customerFirstName }} {{ rental.customerLastName }}</td>
+              <td>{{ rental.carBrand }} - {{ rental.carModel }}</td>
+              <td>{{ rental.rentDate | date:'dd.MM.y' }}</td>
+              <td>
+                <span *ngIf="rental.returnDate">{{ rental.returnDate | date:'dd.MM.y' }}</span>
+              <span *ngIf="!rental.returnDate">Delivery date unknown.</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+    </div> 
+</div> 

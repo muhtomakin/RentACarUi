@@ -1,1 +1,69 @@
-<p>profile works!</p>
+<div class="row text-center ">
+    <div class="col-lg-4 mx-auto my-auto">
+ 
+       <div class="card shadow">
+          <div class="card-header display-5">
+             <i class=""></i> Account
+          </div>
+          <div class="card-body">
+ 
+             <form [formGroup]="customerUpdateForm" (ngSubmit)="update()">
+                <div class="row">
+                   <div class="col-lg-6">
+                      <div class="form-floating mb-3">
+                         <input type="text" class="form-control" id="firstName"
+                                formControlName="firstName" placeholder="firstName">
+                         <label for="firstName">Name*</label>
+                      </div>
+                   </div>
+                   <div class="col-lg-6">
+                      <div class="form-floating mb-3">
+                         <input type="text" class="form-control" id="lastName"
+                                formControlName="lastName" placeholder="lastName">
+                         <label for="lastName">Surname*</label>
+                      </div>
+                   </div>
+                </div>
+ 
+                <div class="form-floating mb-3">
+                   <input type="text" class="form-control" id="companyName"
+                          formControlName="companyName" placeholder="companyName">
+                   <label for="companyName">Company Name</label>
+                </div>
+ 
+                <div class="form-floating mb-3">
+                   <input type="email" class="form-control" id="email"
+                          formControlName="email" placeholder="email">
+                   <label for="email">E-Mail*</label>
+                </div>
+ 
+                <div class="form-floating mb-3">
+                   <input type="password" class="form-control" id="password"
+                          formControlName="password" placeholder="password">
+                   <label for="password">Password*</label>
+                </div>
+ 
+                <div class="form-floating mb-3">
+                   <input type="password" class="form-control" id="confirmPassword"
+                          formControlName="confirmPassword" placeholder="confirmPassword">
+                   <label for="confirmPassword">Confirm Password*</label>
+                </div>
+ 
+                <div class="row">
+                   <div class="col-lg-6 my-auto text-start">
+                      <i class="bi-building ms-1"></i> TOMAKIN {{ getYear() }}&copy;
+                   </div>
+                   <div class="col-lg-6">
+                      <div class="d-grid">
+                         <button class="btn btn-primary">
+                            <i class="bi-plus-square me-1"></i> Subscribe
+                         </button>
+                      </div>
+                   </div>
+                </div>
+             </form>
+ 
+          </div>
+       </div>
+    </div>
+ </div>
